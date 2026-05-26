@@ -1,0 +1,7 @@
+2026/05/20 09:32:19 gRPC server running on :50052
+2026/05/20 09:32:42 failed to listen: listen tcp :50052: bind: address already in use
+exit status 1
+2026/05/20 09:35:39 failed to listen: listen tcp :50052: bind: address already in use
+exit status 1
+2026/05/20 18:57:48 failed to listen: listen tcp :50052: bind: address already in use
+exit status 1

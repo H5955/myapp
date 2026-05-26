@@ -1,0 +1,4 @@
+./cli.go
+./common.go
+./mode.go
+./repl.go

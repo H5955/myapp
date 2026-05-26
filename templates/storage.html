@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>System Monitor</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    background:#000;
+    color:white;
+    font-family:Arial;
+
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    display:grid;
+
+    gap:20px;
+
+    max-width:400px;
+
+    margin:auto;
+}
+
+.card{
+    background:#111;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 15px rgba(0,255,136,0.3),
+        0 0 30px rgba(0,255,136,0.2),
+        0 8px 32px rgba(0,0,0,0.5);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+h1{
+    text-align:center;
+    color:#00ff88;
+}
+
+h2{
+    color:#00ffaa;
+}
+
+.value{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.danger{
+    color:red;
+}
+
+.bar{
+    width:100%;
+    height:25px;
+
+    background:#333;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:10px;
+}
+
+.fill{
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #00ff00,
+        #00ffaa
+    );
+
+    border-radius:50px;
+
+    transition:0.5s;
+}
+
+.percent{
+    margin-top:10px;
+    color:#00ffaa;
+}
+
+@keyframes float{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>💻 System Monitor</h1>
+
+<div class="container">
+
+    <!-- STORAGE -->
+
+    <div class="card">
+
+        <h2>💾 Storage</h2>
+
+        <div class="value">
+            Total: {{ total }} GB
+        </div>
+
+        <div class="value">
+            Used: {{ used }} GB
+        </div>
+
+        <div class="value">
+            Free: {{ free }} GB
+        </div>
+
+        <div class="bar">
+            <div class="fill"
+                 style="width: {{ storage_percent }}%;">
+            </div>
+        </div>
+
+        <div class="percent">
+            {{ storage_percent }}% Used
+        </div>
+
+    </div>
+
+    <!-- RAM -->
+
+    <div class="card">
+
+        <h2>🧠 RAM</h2>
+
+        <div class="value">
+            {{ ram_used }} GB / {{ ram_total }} GB
+        </div>
+
+        <div class="bar">
+            <div class="fill"
+                 style="width: {{ ram_percent }}%;">
+            </div>
+        </div>
+
+        <div class="percent">
+            {{ ram_percent }}% Used
+        </div>
+
+    </div>
+
+    <!-- BATTERY -->
+
+    <div class="card">
+
+        <h2>🔋 Battery</h2>
+
+        <div class="value">
+            {{ battery_percent }}%
+        </div>
+
+        <div class="bar">
+            <div class="fill"
+                 style="width: {{ battery_percent }}%;">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CPU -->
+
+    <div class="card">
+
+        <h2>⚡ CPU</h2>
+
+        <div class="value">
+            {{ cpu_percent }}%
+        </div>
+
+        <div class="bar">
+            <div class="fill"
+                 style="width: {{ cpu_percent }}%;">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+setTimeout(() => {
+    location.reload();
+}, 3000);
+
+</script>
+
+</body>
+</html>

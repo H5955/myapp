@@ -1,0 +1,5 @@
+./commands.go
+./completer.go
+./proto_commands.go
+./repl.go
+./splash_others.go

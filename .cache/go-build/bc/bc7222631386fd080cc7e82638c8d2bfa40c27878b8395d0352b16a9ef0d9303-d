@@ -1,0 +1,9 @@
+./builder.go
+./doc.go
+./enum.go
+./field.go
+./file.go
+./message.go
+./resolver.go
+./service.go
+./types.go

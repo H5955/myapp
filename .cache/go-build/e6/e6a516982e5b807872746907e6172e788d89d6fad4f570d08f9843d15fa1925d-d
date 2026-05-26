@@ -1,0 +1,12 @@
+./attributes.go
+./authority.go
+./client.go
+./client_new.go
+./clientimpl.go
+./clientimpl_authority.go
+./clientimpl_dump.go
+./clientimpl_loadreport.go
+./clientimpl_watchers.go
+./logging.go
+./requests_counter.go
+./singleton.go

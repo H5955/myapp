@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+
+    <style>
+        body{
+            background:#111;
+            color:white;
+            font-family:Arial;
+            padding:20px;
+        }
+
+        h1{
+            color:#00ff88;
+        }
+
+        form{
+            display:flex;
+            gap:10px;
+            margin-bottom:20px;
+        }
+
+        input{
+            flex:1;
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+        }
+
+        button{
+            background:#00ff88;
+            border:none;
+            padding:15px 20px;
+            border-radius:10px;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .todo{
+            background:#1e1e1e;
+            padding:15px;
+            border-radius:12px;
+            margin-bottom:10px;
+            font-size:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🚀 My Todo App</h1>
+
+<form action="/add" method="POST">
+
+    <input
+        type="text"
+        name="task"
+        placeholder="Enter task"
+        required
+    >
+
+    <button type="submit">
+        Add
+    </button>
+
+</form>
+
+{% for todo in todos %}
+
+<div class="todo">
+    ✅ {{ todo[1] }}
+</div>
+
+{% endfor %}
+
+</body>
+</html>

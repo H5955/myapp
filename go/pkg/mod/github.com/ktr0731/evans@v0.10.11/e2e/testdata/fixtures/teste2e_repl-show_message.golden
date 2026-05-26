@@ -1,0 +1,19 @@
++-----------------------------+
+|           MESSAGE           |
++-----------------------------+
+| MapResponse                 |
+| SimpleRequest               |
+| SimpleResponse              |
+| UnaryBytesRequest           |
+| UnaryEnumRequest            |
+| UnaryHeaderRequest          |
+| UnaryMapMessageRequest      |
+| UnaryMapRequest             |
+| UnaryMessageRequest         |
+| UnaryOneofRequest           |
+| UnaryRepeatedEnumRequest    |
+| UnaryRepeatedMessageRequest |
+| UnaryRepeatedRequest        |
+| UnarySelfRequest            |
++-----------------------------+
+

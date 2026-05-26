@@ -1,0 +1,6 @@
+commandHistory = ["echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc\rsource ~/.bashrc", "echo\rsourceexit", "exit", "show package", "package hello", "service Greeter", "show rpc", "SayHello", "call SayHello", "go version"]
+version = "0.10.11"
+
+[updateInfo]
+  installedBy = ""
+  latestVersion = ""

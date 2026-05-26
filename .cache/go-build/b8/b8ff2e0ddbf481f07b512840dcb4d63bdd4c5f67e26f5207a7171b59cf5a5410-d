@@ -1,0 +1,4 @@
+./ads.pb.go
+./ads.pb.validate.go
+./discovery.pb.go
+./discovery.pb.validate.go
