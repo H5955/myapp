@@ -1,4 +1,9 @@
 node_modules/
+.gradle/
+build/
+*.db
+*.zip
+__pycache__/node_modules/
 __pycache__/
 *.db
 *.zip
